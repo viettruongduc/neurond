@@ -1,0 +1,9 @@
+.concept1h2-1 {
+    justify-content: center;
+    display: flex;
+    .article-card {
+        &:nth-last-child(1) {
+            margin-bottom: 0 !important;
+        }
+    }
+}

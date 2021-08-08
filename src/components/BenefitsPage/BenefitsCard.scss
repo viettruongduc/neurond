@@ -1,0 +1,31 @@
+.benefits-card {
+  background-color: var(--white);
+  width: auto;
+  justify-content: center;
+  display: flex;
+  height: auto;
+  &__row {
+    width: 100%;
+    padding: 0 !important;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    &__col-md-6 {
+      padding: 0;
+      width: 50%;
+      margin-bottom: 64px;
+      &:nth-child(even) {
+        padding-left: 32px;
+      }
+      &:nth-child(odd) {
+        padding-right: 32px;
+      }
+      &:nth-last-child(1) {
+        margin-bottom: 0;
+      }
+      &:nth-last-child(2) {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

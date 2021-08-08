@@ -1,0 +1,149 @@
+[
+  {
+    "jobId": "01",
+    "jobName": "Business Intelligence Developer",
+    "quantity": "5",
+    "dateTime": "2021-01-30",
+    "require": [
+      "At least 2,5 years experience working in Microsoft BI technologies (SQL Server, SSIS, SSAS, DAX, Power BI, …).",
+      "Knowledgeable in SQL queries, stored procedures, indexes, execution plans.",
+      "Experienced in analysis, design, implementation, and support of DWH solutions; including Star Schemas and SSAS Tabular models.",
+      "Experienced in visualization development within Power BI. Excellent English communication, interpersonal and presentation skills.",
+      "Ability to contribute both independently and as part of a team."
+    ],
+    "slug": "BusinessIntelligenceDeveloper",
+    "responsibilities": [
+      "Design, develop, test, deploy, and maintain data warehouse architecture and data models to meet business needs.",
+      "Responsible for data warehouse data quality and integrity adhering to data security standards and procedures.",
+      "Mine data for insights and conduct data exploration, cleansing, and transformation.",
+      "Prepare reports or documents and present findings to management.",
+      "Create and maintain technical documentation and guidelines for BI Solutions.",
+      "Implement design, build, and deployment of dashboards, reports, and data visualizations.",
+      "Maintain knowledge of emerging technologies and trends in analytics and data visualization."
+    ],
+    "softSkills": [
+      "Great problem-solving skills.",
+      "Proactive and effective self-learning and research skills.",
+      "Skills in reading and writing English.",
+      "Effective English language skills in video conferencing and face to face communication."
+    ]
+  },
+  {
+    "jobId": "02",
+    "jobName": "Data Engineer",
+    "quantity": "2",
+    "dateTime": "2021-06-30",
+    "require": [
+      "Advanced working SQL knowledge and experience working with relational databases, query authoring (SQL, Stored Procedures) as well as working familiarity with a variety of other database technologies (eg SSAS, SSIS, NoSQL).",
+      "Experience building and optimizing data pipelines, architectures and data sets.",
+      "Experience performing root cause analysis on internal and external data and processes to answer specific business questions and identify opportunities for improvement.",
+      "Strong analytic skills related to working with datasets.",
+      "It is also beneficial, but not mandatory, to have experience using the following software/tools:"
+    ],
+    "requireChild": [
+      "Azure deployed Cloud Data Services, including Azure Data Factory, Azure Data Bricks, Azure Data Lake and Azure Synapse.",
+      "Python, R, C#, Net Core, Web API."
+      ],
+    "slug": "DataEngineer",
+    "responsibilities": [
+      "Create and maintain optimal data pipeline architecture.",
+      "Assemble large, complex data sets that meet functional / non-functional business requirements.",
+      "Identify, design, and implement internal process improvements: automating manual processes, optimizing data delivery, re-designing infrastructure for greater scalability, etc.",
+      "Create data tools for analytics and data scientist team members that assist them in building and optimizing the product into an innovative industry leader.",
+      "Work with data and analytics experts to strive for greater functionality in the data systems.",
+      "Build or leverage existing analytics tools that utilize the data pipeline to provide actionable insights into customer acquisition, operational efficiency and other key business performance metrics.",
+      "Build the infrastructure required for optimal extraction, transformation, and loading of data from a wide variety of data sources using SQL, APIs and potentially ‘big data’ technologies.",
+      "Work with stakeholders to assist with data-related technical issues and support data infrastructure needs.",
+      "Keep the data secured through on-prem and cloud data centers."
+    ],
+    "softSkills": [
+      "Great problem-solving skills.",
+      "Proactive and effective self-learning and research skills.",
+      "Skills in reading and writing English.",
+      "Effective English language skills in video conferencing and face to face communication."
+    ]
+  },
+  {
+    "jobId": "03",
+    "jobName": "AI Senior Engineer",
+    "quantity": "1",
+    "dateTime": "2021-01-31",
+    "require": [
+      "Experience in state-of-the-art learning method.",
+      "At least 5 years in AI, Machine-Learning, Big Data, or Data-Mining development experience.",
+      "Mastery of ML CI/CD including:"
+    ],
+    "requireChild": [
+      "ML pipelines, model management and inference deployment."
+    ],
+    "requireCont": [
+      "Hand on experience in the following: Spark, Containerization, Cloud platforms ML environments (Azure/GCP), Databricks, Github, ML flow.",
+      "Experience deploying models to production and developing models in a reproducible framework"
+    ],
+    "slug": "AISeniorEngineer",
+    "responsibilities": [
+      "Carry out model presentation and communication with stakeholders, push AI or machine learning conception to market and build the technical key ability of UCD.",
+      "Define, develop, and deliver novel AI, mathematical, and statistical models and algorithms to address program needs such as prediction, optimization, and classification.",
+      "Apply machine learning algorithms to large sets of structured and unstructured data (during ingest and at rest) to address program needs such as applications in pattern recognition, target detection and tracking, machine learning and decision systems, and robotic/unmanned systems.",
+      "Develop prototypes for advanced artificial intelligence techniques applied to Multi-INT, big data ingest and analysis using tools such as Python, Spark, Scripting, Jupyter Notebooks, MATLAB, TensorFLow, and AWS SageMaker.",
+      "Design, develop, document, test and debug applications software and systems that contain logical and mathematical solutions."
+    ],
+    "softSkills": [
+      "Great problem-solving skills.",
+      "Proactive and effective self-learning and research skills.",
+      "Skills in reading and writing English.",
+      "Effective English language skills in video conferencing and face to face communication."
+    ]
+  },
+  {
+    "jobId": "04",
+    "jobName": "AI Fresher Engineer",
+    "quantity": "1",
+    "dateTime": "2021-01-31",
+    "require": [
+      "Interested in working, research in AI field. Basic knowledge in Calculus.", 
+      "Basic knowledge of Python (any other languages like C++, JavaScript are a plus), experienced in data library such as Numpy, Pandas, … or deep learning framework TensorFlow, PyTorch, Keras is a plus.",
+      "Experience in deploying Artificial Intelligence/Machine Learning systems is a plus.",
+      "Knowledge of modern Artificial Intelligence techniques (object detection, natural language processing,…)"
+    ],
+    "slug": "AIFresherEngineer",
+    "responsibilities": [
+      "Understand the business problem, challenge of existing technologies and areas of application for AI technologies.",
+      "Identify and choose right AI or cognitive computing technologies for solving problems and formulate AI recipes for development.",
+      "Develop required machine learning models or prototype applications applying formulated AI recipes and verify the problem/solution fit.",
+      "Involve in development of AI Platform and AI-nization projects."
+    ],
+    "softSkills": [
+      "Strong analytical thinking and problem solving skills.",
+      "Ability to learn new and emerging technologies.",
+      "Proactive and effective self-learning and research skills.",
+      "Skills in reading and writing English.",
+      "Effective English language skills in video conferencing and face to face communication.",
+      "Demonstrated ability to deliver working solutions on a tight schedule."
+    ]
+  },
+  {
+    "jobId": "05",
+    "jobName": "AI Intern",
+    "quantity": "5",
+    "dateTime": "2021-01-31",
+    "require": ["Be interested in working, research in AI field.",
+      "Good communication in English."
+  ],
+    "slug": "AIIntern",
+    "responsibilities": [
+      "Understand the business problem, challenge of existing technologies and areas of application for AI technologies.",
+      "Identify and choose right AI or cognitive computing technologies for solving problems and formulate AI recipes for development.",
+      "Develop required machine learning models or prototype applications applying formulated AI recipes and verify the problem/solution fit.",
+      "Involve in development of AI Platform and AI-nization projects."
+    ],
+    "softSkills": [
+      "Strong analytical thinking and problem solving skills.",
+      "Ability to learn new and emerging technologies.",
+      "Proactive and effective self-learning and research skills.",
+      "Skills in reading and writing English.",
+      "Effective English language skills in video conferencing and face to face communication.",
+      "Demonstrated ability to deliver working solutions on a tight schedule."
+    ]
+  }
+]

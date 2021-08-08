@@ -1,0 +1,15 @@
+version: "3.7"
+
+services:
+  frontend:
+    build: 
+      context: . # link to subfolder of mono-repo
+      dockerfile: Dockerfile
+    # command: ts-node node_modules/.bin/gatsby develop -H 0.0.0.0 -p 3000
+    volumes:
+      - ./frontend:/app
+    restart: "no"
+    ports:
+      - 9000:9000
+    # allows the frontend to access the backend at localhost, which allows Gatsby to access the api
+    # and the Api to include localhost:8000 (and not backend:8000) in the image paths.

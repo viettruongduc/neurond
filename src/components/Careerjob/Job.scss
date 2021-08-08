@@ -1,0 +1,41 @@
+.job-list {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  padding: 0 110px 35px;
+  &:last-child {
+    padding-bottom: 0;
+  }
+  &__upper {
+    text-transform: uppercase;
+    &__AA {
+      color: var(--black);
+      text-decoration: none !important;
+    }
+  }
+  &__spanC {
+    padding: 8px 0 15px 15px;
+  }
+  &__frame {
+    width: 90%;
+    margin: 40px auto;
+    margin-top: 50px;
+    text-align: center;
+  }
+  .job-info {
+    text-transform: uppercase;
+    font-weight: 400;
+    padding: 40px 0 10px 15px;
+    line-height: 33px;
+    display: block;
+  }
+  .sprite-career-icon {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+  }
+  .distance {
+    padding: 0 0 0 10px;
+  }
+}

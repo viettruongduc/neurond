@@ -1,0 +1,120 @@
+.header {
+  background-color: var(--black-blue);
+  display: flex;
+  justify-content: center;
+}
+
+.navbar {
+  width: 1200px;
+  padding: 12px 0 !important;
+
+  .nav-link {
+    padding: 16px 18px !important;
+    &__logo {
+      display: block;
+      padding: 8px 8px 8px 16px !important;
+      &__image {
+        width: 247px;
+        height: 100%;
+      }
+    }
+  }
+
+  .navbar-toggler-custom {
+    margin: 0 !important;
+  }
+
+  .navbar-collapse {
+    padding-bottom: var(--pd-sm);
+  }
+
+  .dropdown-menu {
+    background-color: var(--black-blue) !important;
+  }
+
+  .drop-menu {
+    text-transform: capitalize;
+    font-size: 20px;
+    & > nav-link {
+      border-left: 8px !important;
+      color: var(--black-blue);
+    }
+
+    .sub-menu_service {
+      text-transform: capitalize;
+      background-color: var(--black-blue);
+      width: 310px;
+      &:hover {
+        background-color: var(--black-blue-lighter) !important;
+        color: var(--white) !important;
+      }
+    }
+    .sub-menu_language {
+      text-transform: capitalize;
+      background-color: var(--black-blue);
+      width: 150px !important;
+      &:hover {
+        background-color: var(--black-blue-lighter);
+      }
+    }
+  }
+
+  .navbar-toggler {
+    border-color: none !important;
+  }
+
+  .navbar-menu {
+    text-transform: capitalize;
+    font-size: 20px;
+  }
+}
+
+.split-button {
+  border: none;
+  text-transform: capitalize !important;
+  padding: 16px 18px;
+  display: inline-block !important;
+  width: 100%;
+  .btn-primary {
+    background-color: var(--black-blue);
+    border: none;
+    text-align: left;
+    text-transform: capitalize !important;
+    padding: 0;
+    width: 50%;
+  }
+  .dropdown-toggle-split {
+    width: 50%;
+    text-align: right;
+    border: none;
+  }
+  .dropdown-menu {
+    margin-top: 16px !important;
+    width: 100%;
+  }
+  .btn-primary:focus,
+  .btn-primary,
+  .btn-primary:active {
+    background-color: var(--black-blue) !important;
+    border-color: var(--black-blue) !important;
+    box-shadow: none !important;
+    margin: 0;
+  }
+  .sub-menu_language {
+    text-transform: capitalize;
+    background-color: var(--black-blue);
+    width: 150px !important;
+    &:hover {
+      background-color: var(--black-blue-lighter);
+    }
+  }
+  .nav-link {
+    font-size: 1rem !important;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .nav-item.dropdown:hover > .dropdown-menu {
+    display: block !important;
+  }
+}

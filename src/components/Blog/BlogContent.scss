@@ -1,0 +1,42 @@
+.margin-bottom {
+  margin-bottom: 60px;
+}
+.ck-content {
+  width: 100%;
+  .ck-zone {
+    width: 100%;
+    .table {
+      table {
+        width: fit-content !important;
+      }
+    }
+    p,
+    h3,
+    h4,
+    h2 {
+      padding-bottom: 20px;
+    }
+    pre {
+      width: 100%;
+    }
+    .image {
+      margin: 2em auto;
+    }
+    a {
+      word-break: break-all;
+    }
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .ck-content {
+    .ck-zone {
+      p,
+      h3,
+      h4,
+      h2 {
+        padding-bottom: 12px;
+      }
+    }
+  }
+}

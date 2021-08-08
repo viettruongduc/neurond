@@ -1,0 +1,39 @@
+.second-section {
+  background: var(--white);
+  width: auto;
+  justify-content: center;
+  display: flex;
+  height: auto;
+  .wrapper {
+    &__row {
+      width: 100%;
+      padding: 0 !important;
+      margin: 0 !important;
+      height: auto;
+      display: flex;
+      flex-wrap: wrap;
+      &__col-md-6 {
+        padding: 0;
+        width: 50%;
+        margin-bottom: 64px;
+        &:nth-child(even) {
+          padding-left: 32px;
+        }
+        &:nth-child(odd) {
+          padding-right: 32px;
+        }
+        .card-option-button {
+          height: 700px;
+          &__body {
+            &__description {
+              margin-bottom: 0;
+            }
+            .bottom-card {
+              height: 0 !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

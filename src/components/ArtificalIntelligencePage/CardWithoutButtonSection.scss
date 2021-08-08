@@ -1,0 +1,16 @@
+.second-section {
+  .wrapper {
+    &__row {
+      .custom {
+        .card-option-button {
+          height: 560px;
+          &__body {
+            &__description {
+              padding-bottom: 24px !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

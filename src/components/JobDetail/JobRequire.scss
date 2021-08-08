@@ -1,0 +1,24 @@
+.job-require {
+    flex-direction: row !important;
+    align-items: stretch !important;
+    flex-wrap: wrap;
+    .col-md-6 {
+        ul {
+            padding-inline-start: 16px;
+        }
+        padding-left: 32px;
+        margin-bottom: 110px;
+        &:nth-child(even) {
+            padding-left: 32px;
+        }
+        &:nth-child(odd) {
+            padding-right: 32px;
+        }
+        &:nth-last-child(1) {
+            margin-bottom: 0;
+        }
+        &:nth-last-child(2) {
+            margin-bottom: 0;
+        }
+    }
+}

@@ -1,0 +1,21 @@
+:root {
+  --black-blue: #051A34;
+  --light-blue: #5abcda;
+  --gradient-blue: linear-gradient(180deg, rgba(34,103,163,1) 0%, rgba(38,131,142,1) 100%);
+  --black: #000;
+  --white: #fff;
+  --button-color-bg: #051A34;
+  --semi-blue: #ade7f9;
+  --black-blue-lighter: #0431b4;
+  --black-blue-link-card: #0056b3;
+  --pd-lg: 30px;
+  --pd-md: 16px;
+  --pd-sm: 12px;
+  --pd-none: 0;
+  --mg-xl: 120px; // >1024
+  --mg-lg: 100px; // 1024
+  --mg-md: 80px; // 768
+  --mg-sm: 60px; //425
+  --mg-xs: 40px; // < 425
+  --mg-none: 0;
+}

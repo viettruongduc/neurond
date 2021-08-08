@@ -1,0 +1,11 @@
+.benefit-data {
+    .data-engineering {
+        &__skill {
+            .skill:nth-child(3) {
+                .skill-custom {
+                    margin-bottom: 0 !important;
+                }
+            }
+        }
+    }
+}

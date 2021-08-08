@@ -1,0 +1,26 @@
+.salary_and_benefits {
+    background-color: var(--semi-blue);
+    width: 100%;
+    height: auto;
+    padding-bottom: 96px;
+    .heading {
+        padding-top: 60px;
+        text-align: center;
+    }
+    .salary_benefits_data {
+        ul {
+            padding-inline-start: 30px;
+        }
+        column-count: 2;
+        &__item {
+            line-height: 36px;
+        }
+    }
+    .btn-salary-benefits {
+        width: 100%;
+        margin-top: 112px;
+    }
+    .margin-top {
+        margin-top: 80px;
+    }
+}

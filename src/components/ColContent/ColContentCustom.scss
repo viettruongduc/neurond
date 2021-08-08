@@ -1,0 +1,25 @@
+.col-md-6 {
+    &__h2-title {
+        margin-bottom: 24px;
+    }
+    &__picture {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        &__img {
+            width: 100%;
+            max-width: 400px;
+            height: 100%;
+        }
+    }
+    .requireChild {
+        margin-top: -1em;
+        margin-bottom: 0;
+        list-style-type: none;
+        &__item::before { 
+            content: "- ";
+        }
+    }
+}

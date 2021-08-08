@@ -1,0 +1,36 @@
+.banner {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  background: no-repeat center;
+  background-size: cover;
+  .overlay {
+    transition: transform 0.7s;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    .banner-text {
+      position: relative;
+      top: 40%;
+      height: fit-content;
+      .h1-banner {
+        position: relative;
+      }
+      .h4-banner {
+        padding: 20px 0 40px 0;
+        padding-left: var(--mg-lg);
+        padding-right: var(--mg-lg);
+      }
+      .banner_custom {
+        width: 750px;
+      }
+      .banner_button {
+        display: none;
+        // padding-top: 100px;
+      }
+      .banner-button {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+}

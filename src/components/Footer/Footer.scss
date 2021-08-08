@@ -1,0 +1,44 @@
+.footer-container {
+  background: var(--black-blue);
+  display: flex;
+  justify-content: center;
+
+  .footerC {
+    width: 1200px;
+    padding: 64px 0 !important;
+
+    &__colum1 {
+      padding-left: 0;
+
+      &__row1 {
+        padding-bottom: 40px;
+      }
+
+      &__row3 {
+        padding-left: 0;
+      }
+    }
+
+    &__location {
+      margin-bottom: 2rem;
+    }
+  }
+
+  .logo {
+    display: block;
+    padding: 0 8px 0 16px !important;
+
+    &__image {
+      width: 247px;
+      height: 100%;
+    }
+  }
+
+  .rights {
+    font-size: calc(10px + (12 - 10) * ((100vw - 360px) / (1600 - 360))) !important;
+  }
+
+  &__content-right {
+    padding: 0 0 44px 28px !important;
+  }
+}

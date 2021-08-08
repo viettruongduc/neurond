@@ -1,0 +1,25 @@
+.leader-ship {
+    .in-middle {
+        max-width: 585px;
+        text-align: center;
+    }
+    .article-card {
+        &__block {
+            &__img {
+                object-fit: contain;
+            }
+        }
+    }
+    .article-card:nth-child(even) {
+        flex-direction: row-reverse;
+        .block-custom {
+            &:first-child {
+                padding: 0 0 0 32px;
+            }
+            &:last-child {
+                padding: 0 32px 0 0;
+            }
+        }
+    }
+}
+            
