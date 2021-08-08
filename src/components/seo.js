@@ -47,25 +47,34 @@
    console.log('thumbnail2', site.siteMetadata.thumbnail)
    
    return (
-     <MetaTags>
-       <title>{defaultTitle ? `%s | ${defaultTitle}` : null}</title>
-       <meta name="description" content={metaDescription} />
-       <meta property="og:title" content={metaTitle} />
-       <meta property="og:image" content={metaThumbnail} />
-       <meta property="og:image:secure_url" content={metaThumbnail} />
-       <meta property="og:image:alt" content={metaTitle} />
-       <meta property="og:description" content={metaDescription} />
-       <meta property="og:type" content="website" />
-       <meta property="og:url" content={pathname ? `${url}/${pathname.toLowerCase()}` : url} />
-       <meta property="twitter:card" content="summary" />
-       <meta property="twitter:creator" content={site.siteMetadata?.author || ""} />
-       <meta property="twitter:title" content={metaTitle} />
-       <meta property="twitter:description" content={metaDescription} />
-       <meta property="twitter:image" content={metaThumbnail} />
-       <meta property="robots" content="index,follow" />
-       <meta property="keywords" content={keywords} />
-       <link rel="canonical" href={canonical} />
-     </MetaTags>
+    //  <MetaTags>
+    //    <title>{defaultTitle ? `%s | ${defaultTitle}` : null}</title>
+    //    <meta name="description" content={metaDescription} />
+    //    <meta property="og:title" content={metaTitle} />
+    //    <meta property="og:image" content={metaThumbnail} />
+    //    <meta property="og:image:secure_url" content={metaThumbnail} />
+    //    <meta property="og:image:alt" content={metaTitle} />
+    //    <meta property="og:description" content={metaDescription} />
+    //    <meta property="og:type" content="website" />
+    //    <meta property="og:url" content={pathname ? `${url}/${pathname.toLowerCase()}` : url} />
+    //    <meta property="twitter:card" content="summary" />
+    //    <meta property="twitter:creator" content={site.siteMetadata?.author || ""} />
+    //    <meta property="twitter:title" content={metaTitle} />
+    //    <meta property="twitter:description" content={metaDescription} />
+    //    <meta property="twitter:image" content={metaThumbnail} />
+    //    <meta property="robots" content="index,follow" />
+    //    <meta property="keywords" content={keywords} />
+    //    <link rel="canonical" href={canonical} />
+    //  </MetaTags>
+    <div className="wrapper">
+      <MetaTags>
+        <title>{metaTitle}</title>
+        <meta name="description" content={metaDescription} />
+        <meta property="og:title" content={metaTitle} />
+        <meta property="og:image" content={metaThumbnail} />
+      </MetaTags>
+      <div className="content"> Some Content </div>
+    </div>
    )
  }
  
