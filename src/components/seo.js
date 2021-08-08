@@ -9,8 +9,9 @@
  import PropTypes from "prop-types"
  import { Helmet } from "react-helmet"
  import { useStaticQuery, graphql } from "gatsby"
- 
- function SEO({ description, lang, meta, title, thumbnail, metaKeywords, pathname }) {
+ import Facebook from './Facebook'
+
+ function SEO({ description, lang, meta, title, thumbnail, metaKeywords, pathname, article }) {
    const { site } = useStaticQuery(
      graphql`
        query {
@@ -46,6 +47,7 @@
    console.log('thumbnail2', site.siteMetadata.thumbnail)
    
    return (
+     <>
      <Helmet
        htmlAttributes={{
          lang,
@@ -125,6 +127,16 @@
          },
        ].concat(meta)}
      />
+     <Facebook
+        desc={description}
+        image={metaThumbnail}
+        title={title}
+        type={article ? 'article' : 'website'}
+        url={pathname ? `${url}/${pathname.toLowerCase()}` : url}
+        // locale={ogLanguage}
+        // name={facebook}
+      />
+     </>
    )
  }
  

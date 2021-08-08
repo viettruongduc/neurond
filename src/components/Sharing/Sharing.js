@@ -10,8 +10,6 @@ import {
 
  const FBShareButton = props => {
     let encodedURL = encodeURI(props.url);
-    // console.log('encodedURL', encodedURL);
-    // encodedURL = "https://gentle-mud-057482800-303.eastasia.azurestaticapps.net/blogs/how-will-reinforcement-learning-based-recommendation-system-be-in-the-future-part-3"
 
     return (
         <>
