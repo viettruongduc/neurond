@@ -62,7 +62,7 @@ const BlogTemplate = ({ data }) => {
           classCustom="margin-bot-custom"
         />
       </div>
-      <Sharing url={shareUrl} />
+      {blog && <Sharing url={shareUrl} />}
       <BlogContent content={blog.content} />
       <Footer />
     </>

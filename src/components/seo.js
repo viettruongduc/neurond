@@ -127,7 +127,7 @@
          },
        ].concat(meta)}
      />
-     <Facebook
+     {/* <Facebook
         desc={description}
         image={metaThumbnail}
         title={title}
@@ -135,7 +135,7 @@
         url={pathname ? `${url}/${pathname.toLowerCase()}` : url}
         // locale={ogLanguage}
         // name={facebook}
-      />
+      /> */}
      </>
    )
  }
