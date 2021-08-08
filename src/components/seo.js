@@ -43,12 +43,12 @@
    const canonical = slug ? `${url}/${slug}` : url
  
    console.log('title', title)
-   console.log('thumbnail1', thumbnail)
+   console.log('url', url)
    console.log('thumbnail2', site.siteMetadata.thumbnail)
    
    return (
      <MetaTags>
-       <title>{defaultTitle ? `%s | ${defaultTitle}` : null}</title>
+       <title>{metaTitle}</title>
        <meta name="description" content={metaDescription} />
        <meta property="og:title" content={metaTitle} />
        <meta property="og:image:secure_url" content={metaThumbnail} />
