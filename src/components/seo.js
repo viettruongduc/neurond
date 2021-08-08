@@ -9,8 +9,8 @@
  import PropTypes from "prop-types"
  import { Helmet } from "react-helmet"
  import { useStaticQuery, graphql } from "gatsby"
- import MetaTags from 'react-meta-tags';
- function SEO({ description, lang, meta, title, thumbnail, metaKeywords, slug }) {
+ 
+ function SEO({ description, lang, meta, title, thumbnail, metaKeywords, pathname }) {
    const { site } = useStaticQuery(
      graphql`
        query {
@@ -39,33 +39,92 @@
      w.replace(/^\w/, c => c.toUpperCase())
    )
  
-   const metaTitle =  titleUpperCase || defaultTitle
-   const canonical = slug ? `${url}/${slug}` : url
+   const canonical = pathname ? `${url}/${pathname}` : url
  
    console.log('title', title)
    console.log('thumbnail1', thumbnail)
    console.log('thumbnail2', site.siteMetadata.thumbnail)
    
    return (
-     <MetaTags>
-       <title>{metaTitle}</title>
-       <meta name="description" content={metaDescription} />
-       <meta property="og:title" content={metaTitle} />
-       <meta property="og:image:secure_url" content={metaThumbnail} />
-       <meta property="og:image" content={metaThumbnail} />
-       <meta property="og:image:alt" content={metaTitle} />
-       <meta property="og:description" content={metaDescription} />
-       <meta property="og:type" content="website" />
-       <meta property="og:url" content={slug ? `${url}/${slug.toLowerCase()}` : url} />
-       <meta property="twitter:card" content="summary" />
-       <meta property="twitter:creator" content={site.siteMetadata?.author || ""} />
-       <meta property="twitter:title" content={metaTitle} />
-       <meta property="twitter:description" content={metaDescription} />
-       <meta property="twitter:image" content={metaThumbnail} />
-       <meta property="robots" content="index,follow" />
-       <meta property="keywords" content={keywords} />
-       <link rel="canonical" href={canonical} />
-     </MetaTags>
+     <Helmet
+       htmlAttributes={{
+         lang,
+       }}
+       title={titleUpperCase}
+       titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
+       link={
+         canonical
+           ? [
+               {
+                 rel: "canonical",
+                 href: canonical,
+               },
+             ]
+           : []
+       }
+       meta={[
+         {
+           name: `description`,
+           content: metaDescription,
+         },
+         {
+           property: `og:image`,
+           content: metaThumbnail,
+         },
+         {
+           property: `og:image:secure_url`,
+           content: metaThumbnail,
+         },
+         {
+           property: `og:image:alt`,
+           content: defaultTitle,
+         },
+         {
+           property: `og:title`,
+           content: titleUpperCase,
+         },
+         {
+           property: `og:description`,
+           content: metaDescription,
+         },
+         {
+           property: `og:type`,
+           content: `website`,
+         },
+         {
+           property: `og:url`,
+           content: pathname ? `${url}/${pathname.toLowerCase()}` : url,
+         },
+         {
+           name: `twitter:card`,
+           content: `summary`,
+         },
+         {
+           name: `twitter:creator`,
+           content: site.siteMetadata?.author || ``,
+         },
+         {
+           name: `twitter:title`,
+           content: titleUpperCase,
+         },
+         {
+           name: `twitter:description`,
+           content: metaDescription,
+         },
+         {
+           property: `twitter:image`,
+           content: metaThumbnail,
+         },
+         {
+           name: `robots`,
+           content: `index,follow`,
+         },
+         {
+           name: `keywords`,
+           content: keywords,
+         },
+       ].concat(meta)}
+     />
    )
  }
  
@@ -75,7 +134,7 @@
    description: ``,
    thumbnail: ``,
    metaKeywords: ``,
-   slug: ``,
+   pathname: ``,
  }
  
  SEO.propTypes = {
@@ -85,7 +144,7 @@
    title: PropTypes.string.isRequired,
    thumbnail: PropTypes.string,
    metaKeywords: PropTypes.string,
-   slug: PropTypes.string,
+   pathname: PropTypes.string,
  }
  
  export default SEO
