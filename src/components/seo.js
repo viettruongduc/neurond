@@ -38,6 +38,7 @@ function SEO({ description, lang, meta, thumbnail, metaKeywords, title, pathname
         const canonical = pathname ? `${url}/${pathname}` : url
         return (
           <Helmet
+            defer={false}
             htmlAttributes={{
               lang,
             }}
