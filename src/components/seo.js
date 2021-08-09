@@ -68,16 +68,17 @@
     //    <meta property="keywords" content={keywords} />
     //    <link rel="canonical" href={canonical} />
     //  </MetaTags>
-    <div className="wrapper">
-      <MetaTags>
-        <title>{metaTitle}</title>
-        <meta name="description" content={metaDescription} />
-        <meta property="og:title" content={metaTitle} />
-        <meta property="og:image" content={metaThumbnail} />
-        <link rel="canonical" href={canonical} />
-      </MetaTags>
-      <div className="content"> Some Content </div>
+    <HeadProvider>
+    <div className="Home">
+      <Title>{metaTitle}</Title>
+      <Link rel="canonical" href={canonical} />
+      <Meta name="description" content={metaDescription} />
+      <Meta property="og:title" content={metaDescription} />
+      <Meta property="og:image" content={metaThumbnail} />
+      <Meta property="og:description" content={metaDescription} />
+      <Meta property="robots" content="index,follow" />
     </div>
+  </HeadProvider>
     
    )
  }
