@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
-
-function SEO({ description, lang, meta, thumbnail, metaKeywords, title, pathname }) {
+import SchemaOrg from './schema-org'
+function SEO({ description, lang, meta, thumbnail, metaKeywords, title, pathname, isBlogPost }) {
 
   const detailsQuery = graphql`
   query DefaultSEOQuery {
@@ -37,6 +37,7 @@ function SEO({ description, lang, meta, thumbnail, metaKeywords, title, pathname
       
         const canonical = pathname ? `${url}/${pathname}` : url
         return (
+          <>
           <Helmet
             defer={false}
             htmlAttributes={{
@@ -117,6 +118,19 @@ function SEO({ description, lang, meta, thumbnail, metaKeywords, title, pathname
               },
             ].concat(meta)}
           />
+          <SchemaOrg
+            isBlogPost={isBlogPost}
+            url={url}
+            title={titleUpperCase || defaultTitle}
+            image={metaThumbnail}
+            description={metaDescription}
+            // datePublished={datePublished}
+            canonicalUrl={canonical}
+            // author={seo.author}
+            // organization={seo.organization}
+            // defaultTitle={seo.title}
+      />
+      </>
         )
       }}
     />

@@ -52,6 +52,7 @@ const BlogTemplate = ({ data }) => {
         metaKeywords={blog.metaKeywords}
         thumbnail={blog.thumbnail}
         pathname={blogSlug}
+        isBlogPost
       />
       <Header />
       <div className="margin-top-2">
