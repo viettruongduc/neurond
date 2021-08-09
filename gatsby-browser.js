@@ -1,4 +1,5 @@
 import ReactDOM from 'react-dom';
+import { render } from 'react-snapshot';
 const loadableReady = require('@loadable/component').loadableReady;
 
 // You can delete this file if you're not using it
@@ -18,7 +19,7 @@ export const registerServiceWorker = () => true
 export const replaceHydrateFunction = () => {
   return (element, container, callback) => {
     loadableReady(() => {
-        ReactDOM.render(element, container, callback);
+        render(element, container, callback);
     });
   };
 };
