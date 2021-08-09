@@ -10,6 +10,8 @@
  import { Helmet } from "react-helmet"
  import { useStaticQuery, graphql } from "gatsby"
  import MetaTags from 'react-meta-tags';
+ import { HeadProvider, Title, Link, Meta } from 'react-head';
+
  function SEO({ description, lang, meta, title, thumbnail, metaKeywords, pathname }) {
    const { site } = useStaticQuery(
      graphql`
@@ -72,9 +74,11 @@
         <meta name="description" content={metaDescription} />
         <meta property="og:title" content={metaTitle} />
         <meta property="og:image" content={metaThumbnail} />
+        <link rel="canonical" href={canonical} />
       </MetaTags>
       <div className="content"> Some Content </div>
     </div>
+    
    )
  }
  
