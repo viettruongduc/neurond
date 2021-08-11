@@ -46,7 +46,7 @@ const BlogTemplate = ({ data }) => {
   return (
     <>
       <SEO
-        title={t("How Will Reinforcement Learning Based Recommendation System Be In The Future — Part 3")}
+        title={t(`${blog.title}`)}
         description={blog.metaDescription}
         metaKeywords={blog.metaKeywords}
         thumbnail={blog.thumbnail}

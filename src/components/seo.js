@@ -74,7 +74,7 @@ function SEO({ description, lang, meta, thumbnail, metaKeywords, title, pathname
               },
               {
                 property: `og:title`,
-                content: titleUpperCase || defaultTitle,
+                content: title || defaultTitle,
               },
               {
                 property: `og:description`,
