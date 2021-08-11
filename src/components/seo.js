@@ -43,7 +43,7 @@ function SEO({ description, lang, meta, thumbnail, metaKeywords, title, pathname
             htmlAttributes={{
               lang,
             }}
-            title={titleUpperCase}
+            title={defaultTitle}
             titleTemplate={titleUpperCase || `%s | ${data.site.siteMetadata.title}`}
             link={
               canonical
