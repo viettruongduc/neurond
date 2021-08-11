@@ -74,7 +74,7 @@ function SEO({ description, lang, meta, thumbnail, metaKeywords, title, pathname
               },
               {
                 property: `og:title`,
-                content: title || defaultTitle,
+                content: defaultTitle,
               },
               {
                 property: `og:description`,
