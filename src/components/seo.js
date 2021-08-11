@@ -31,11 +31,10 @@ function SEO({ description, lang, meta, thumbnail, metaKeywords, title, pathname
         const url = data.site.siteMetadata.siteUrl
         const defaultTitle = data.site.siteMetadata?.title
       
-        const titleUpperCase = title
-        // .replace(/\w\S*/g, w =>
-        //   w.replace(/^\w/, c => c.toUpperCase())
-        // )
-
+        const titleUpperCase = title.replace(/\w\S*/g, w =>
+          w.replace(/^\w/, c => c.toUpperCase())
+        )
+      
         const canonical = pathname ? `${url}/${pathname}` : url
         return (
           <>
@@ -75,7 +74,7 @@ function SEO({ description, lang, meta, thumbnail, metaKeywords, title, pathname
               },
               {
                 property: `og:title`,
-                content: title,
+                content: titleUpperCase || defaultTitle,
               },
               {
                 property: `og:description`,
