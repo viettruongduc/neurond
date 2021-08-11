@@ -29,7 +29,7 @@ function SEO({ description, lang, meta, thumbnail, metaKeywords, title, pathname
       
         const keywords = metaKeywords ? metaKeywords : data.site.siteMetadata.keyWords
         const url = data.site.siteMetadata.siteUrl
-        const defaultTitle = data.site.siteMetadata?.title
+        const defaultTitle = data.site.siteMetadata.title
       
         const titleUpperCase = title.replace(/\w\S*/g, w =>
           w.replace(/^\w/, c => c.toUpperCase())
