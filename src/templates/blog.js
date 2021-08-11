@@ -22,7 +22,6 @@ const BlogTemplate = ({ data }) => {
   const shareUrl = `${siteUrl}/${blogSlug}`
 
   useEffect(() => {
-    console.log(11111111111, blog)
     const queryBlog = data.blog
     const DEFAULT_LANGUAGE = "en"
 
@@ -47,7 +46,7 @@ const BlogTemplate = ({ data }) => {
   return (
     <>
       <SEO
-        title={t(`${blog.title}`)}
+        title={blog.title}
         description={blog.metaDescription}
         metaKeywords={blog.metaKeywords}
         thumbnail={blog.thumbnail}
