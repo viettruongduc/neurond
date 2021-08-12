@@ -25,7 +25,8 @@ function SEO({ description, lang, meta, thumbnail, metaKeywords, title, pathname
       query={detailsQuery}
       render={data => {
         const metaDescription = description || data.site.siteMetadata.description
-        const metaThumbnail =  thumbnail || data.site.siteMetadata.thumbnail
+        // const metaThumbnail =  thumbnail || data.site.siteMetadata.thumbnail
+        const metaThumbnail =  "https://neurondstorage.blob.core.windows.net/neurondasset/blogs%2F1_5Wc2Jwwrgygj_8ygGlgV0w.png"
       
         const keywords = metaKeywords ? metaKeywords : data.site.siteMetadata.keyWords
         const url = data.site.siteMetadata.siteUrl
@@ -41,23 +42,23 @@ function SEO({ description, lang, meta, thumbnail, metaKeywords, title, pathname
           "@context": `https://schema.org/`,
           "@type": type,
           url: canonical,
-          // image: metaThumbnail ?
-          //     {
-          //         "@type": `ImageObject`,
-          //         url: metaThumbnail,
-          //         // width: config.shareImageWidth,
-          //         // height: config.shareImageHeight,
-          //     } : undefined,
-          // publisher: {
-          //     "@type": `Organization`,
-          //     name: title,
-          //     logo: {
-          //         "@type": `ImageObject`,
-          //         url: metaThumbnail,
-          //         width: 60,
-          //         height: 60,
-          //     },
-          // },
+          image: metaThumbnail ?
+              {
+                  "@type": `ImageObject`,
+                  url: metaThumbnail,
+                  // width: config.shareImageWidth,
+                  // height: config.shareImageHeight,
+              } : undefined,
+          publisher: {
+              "@type": `Organization`,
+              name: title,
+              logo: {
+                  "@type": `ImageObject`,
+                  url: metaThumbnail,
+                  width: 60,
+                  height: 60,
+              },
+          },
           mainEntityOfPage: {
               "@type": `WebPage`,
               "@id": url,
@@ -74,29 +75,29 @@ function SEO({ description, lang, meta, thumbnail, metaKeywords, title, pathname
             }}
             title={defaultTitle}
             titleTemplate={data.site.siteMetadata.title}
-            // link={
-            //   canonical
-            //     ? [
-            //         {
-            //           rel: "canonical",
-            //           href: canonical,
-            //         },
-            //       ]
-            //     : []
-            // }
+            link={
+              canonical
+                ? [
+                    {
+                      rel: "canonical",
+                      href: canonical,
+                    },
+                  ]
+                : []
+            }
             meta={[
               {
                 name: `description`,
                 content: metaDescription,
               },
-              // {
-              //   property: `og:image`,
-              //   content: metaThumbnail,
-              // },
-              // {
-              //   property: `og:image:secure_url`,
-              //   content: metaThumbnail,
-              // },
+              {
+                property: `og:image`,
+                content: metaThumbnail,
+              },
+              {
+                property: `og:image:secure_url`,
+                content: metaThumbnail,
+              },
               {
                 property: `og:image:alt`,
                 content: defaultTitle,
@@ -133,10 +134,10 @@ function SEO({ description, lang, meta, thumbnail, metaKeywords, title, pathname
                 name: `twitter:description`,
                 content: metaDescription,
               },
-              // {
-              //   property: `twitter:image`,
-              //   content: metaThumbnail,
-              // },
+              {
+                property: `twitter:image`,
+                content: metaThumbnail,
+              },
               {
                 name: `robots`,
                 content: `index,follow`,
@@ -147,7 +148,7 @@ function SEO({ description, lang, meta, thumbnail, metaKeywords, title, pathname
               },
             ]}
           />
-          {/* <SchemaOrg
+          <SchemaOrg
             isBlogPost={isBlogPost}
             url={url}
             title={titleUpperCase || defaultTitle}
@@ -155,14 +156,14 @@ function SEO({ description, lang, meta, thumbnail, metaKeywords, title, pathname
             description={metaDescription}
             // canonical={canonical}
             defaultTitle={defaultTitle}
-          /> */}
-          {/* <Helmet>
+          />
+          <Helmet>
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:image" content={metaThumbnail} />
             <meta property="og:image" content={metaThumbnail} />
             <meta property="og:image:width" content="100" />
             <meta property="og:image:height" content="100" />
-        </Helmet > */}
+        </Helmet >
       </>
         )
       }}
