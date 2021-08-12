@@ -124,7 +124,7 @@ function SEO({ description, lang, meta, thumbnail, metaKeywords, title, pathname
             title={titleUpperCase || defaultTitle}
             // image={metaThumbnail}
             description={metaDescription}
-            canonicalUrl={canonical}
+            // canonicalUrl={canonical}
             defaultTitle={defaultTitle}
           />
       </>
