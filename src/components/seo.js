@@ -45,16 +45,16 @@ function SEO({ description, lang, meta, thumbnail, metaKeywords, title, pathname
             }}
             title={defaultTitle}
             titleTemplate={data.site.siteMetadata.title}
-            link={
-              canonical
-                ? [
-                    {
-                      rel: "canonical",
-                      href: canonical,
-                    },
-                  ]
-                : []
-            }
+            // link={
+            //   canonical
+            //     ? [
+            //         {
+            //           rel: "canonical",
+            //           href: canonical,
+            //         },
+            //       ]
+            //     : []
+            // }
             meta={[
               {
                 name: `description`,
