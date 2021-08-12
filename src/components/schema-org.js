@@ -24,53 +24,39 @@ export default React.memo(
       },
     ]
 
-    const schema = isBlogPost
-      ? [
-          ...baseSchema,
+    const jsonLd = {
+      "@context": `https://schema.org/`,
+      "@type": type,
+      url: canonical,
+      image: shareImage ?
           {
-            '@context': 'http://schema.org',
-            '@type': 'BreadcrumbList',
-            itemListElement: [
-              {
-                '@type': 'ListItem',
-                position: 1,
-                item: {
-                  '@id': url,
-                  name: title,
-                  image,
-                },
-              },
-            ],
+              "@type": `ImageObject`,
+              url: shareImage,
+              width: config.shareImageWidth,
+              height: config.shareImageHeight,
+          } : undefined,
+      publisher: {
+          "@type": `Organization`,
+          name: settings.title,
+          logo: {
+              "@type": `ImageObject`,
+              url: publisherLogo,
+              width: 60,
+              height: 60,
           },
-          {
-            '@context': 'http://schema.org',
-            '@type': 'BlogPosting',
-            url,
-            name: title,
-            alternateName: defaultTitle,
-            headline: title,
-            image: {
-              '@type': 'ImageObject',
-              url: image,
-            },
-            description,
-            // author: {
-            //   '@type': 'Person',
-            //   name: author.name,
-            // },
-            mainEntityOfPage: {
-              '@type': 'WebSite',
-              '@id': canonicalUrl,
-            },
-            datePublished,
-          },
-        ]
-      : baseSchema
+      },
+      mainEntityOfPage: {
+          "@type": `WebPage`,
+          "@id": config.siteUrl,
+      },
+      description,
+  }
 
     return (
       <Helmet>
         {/* Schema.org tags */}
-        <script type="application/ld+json">{JSON.stringify(schema)}</script>
+        {/* <script type="application/ld+json">{JSON.stringify(schema)}</script> */}
+        <script type="application/ld+json">{JSON.stringify(jsonLd, undefined, 4)}</script>
       </Helmet>
     )
   },

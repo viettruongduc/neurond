@@ -36,6 +36,35 @@ function SEO({ description, lang, meta, thumbnail, metaKeywords, title, pathname
         )
       
         const canonical = pathname ? `${url}/${pathname}` : url
+
+        const jsonLd = {
+          "@context": `https://schema.org/`,
+          "@type": type,
+          url: canonical,
+          image: metaThumbnail ?
+              {
+                  "@type": `ImageObject`,
+                  url: metaThumbnail,
+                  // width: config.shareImageWidth,
+                  // height: config.shareImageHeight,
+              } : undefined,
+          publisher: {
+              "@type": `Organization`,
+              name: title,
+              logo: {
+                  "@type": `ImageObject`,
+                  url: metaThumbnail,
+                  width: 60,
+                  height: 60,
+              },
+          },
+          mainEntityOfPage: {
+              "@type": `WebPage`,
+              "@id": url,
+          },
+          description,
+      }
+
         return (
           <>
           <Helmet
@@ -127,6 +156,13 @@ function SEO({ description, lang, meta, thumbnail, metaKeywords, title, pathname
             // canonicalUrl={canonical}
             defaultTitle={defaultTitle}
           />
+          <Helmet>
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:image" content={metaThumbnail} />
+            <meta property="og:image" content={metaThumbnail} />
+            <meta property="og:image:width" content="100" />
+            <meta property="og:image:height" content="100" />
+        </Helmet >
       </>
         )
       }}
