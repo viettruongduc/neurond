@@ -41,23 +41,23 @@ function SEO({ description, lang, meta, thumbnail, metaKeywords, title, pathname
           "@context": `https://schema.org/`,
           "@type": type,
           url: canonical,
-          image: metaThumbnail ?
-              {
-                  "@type": `ImageObject`,
-                  url: metaThumbnail,
-                  // width: config.shareImageWidth,
-                  // height: config.shareImageHeight,
-              } : undefined,
-          publisher: {
-              "@type": `Organization`,
-              name: title,
-              logo: {
-                  "@type": `ImageObject`,
-                  url: metaThumbnail,
-                  width: 60,
-                  height: 60,
-              },
-          },
+          // image: metaThumbnail ?
+          //     {
+          //         "@type": `ImageObject`,
+          //         url: metaThumbnail,
+          //         // width: config.shareImageWidth,
+          //         // height: config.shareImageHeight,
+          //     } : undefined,
+          // publisher: {
+          //     "@type": `Organization`,
+          //     name: title,
+          //     logo: {
+          //         "@type": `ImageObject`,
+          //         url: metaThumbnail,
+          //         width: 60,
+          //         height: 60,
+          //     },
+          // },
           mainEntityOfPage: {
               "@type": `WebPage`,
               "@id": url,
@@ -145,24 +145,24 @@ function SEO({ description, lang, meta, thumbnail, metaKeywords, title, pathname
                 name: `keywords`,
                 content: keywords,
               },
-            ].concat(meta)}
+            ]}
           />
-          <SchemaOrg
+          {/* <SchemaOrg
             isBlogPost={isBlogPost}
             url={url}
             title={titleUpperCase || defaultTitle}
-            thumbnail={metaThumbnail}
+            // thumbnail={metaThumbnail}
             description={metaDescription}
-            canonical={canonical}
+            // canonical={canonical}
             defaultTitle={defaultTitle}
-          />
-          <Helmet>
+          /> */}
+          {/* <Helmet>
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:image" content={metaThumbnail} />
             <meta property="og:image" content={metaThumbnail} />
             <meta property="og:image:width" content="100" />
             <meta property="og:image:height" content="100" />
-        </Helmet >
+        </Helmet > */}
       </>
         )
       }}
