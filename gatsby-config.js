@@ -7,7 +7,7 @@ module.exports = {
     description: `Neurond AI and data solution, consultant company in Vietnam. High-quality business intelligence, data analyst, AI engineer, data scientist power businesses.`,
     author: `@NeurondAI`,
     siteUrl: `https://neurond.herokuapp.com/`,
-    thumbnail: `https://cdn.neurond.com/neurondasset/assets/image/branch/neurond-thumbnail.jpg`,
+    // thumbnail: `https://cdn.neurond.com/neurondasset/assets/image/branch/neurond-thumbnail.jpg`,
     keyWords: `Neurond, Neurond AI, AI Engineer in Vietnam, Data Engineer in Vietnam, Data solution, End-to-end AI solution, Vietnam Business Intelligence company, AI and Data for transformation business, End-to-end data solution, Data Analyst. Data Scientist in Vietnam, High-tech company`,
   },
   plugins: [
