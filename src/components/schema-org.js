@@ -3,51 +3,37 @@ import {Helmet} from 'react-helmet'
 
 export default React.memo(
   ({
-    author,
-    canonicalUrl,
-    datePublished,
-    defaultTitle,
+    canonical,
+    thumbnail,
     description,
-    image,
-    isBlogPost,
-    organization,
     title,
     url,
   }) => {
-    const baseSchema = [
-      {
-        '@context': 'http://schema.org',
-        '@type': 'WebSite',
-        url,
-        name: title,
-        alternateName: defaultTitle,
-      },
-    ]
 
     const jsonLd = {
       "@context": `https://schema.org/`,
-      "@type": type,
+      "@type": "Website",
       url: canonical,
-      image: shareImage ?
+      image: thumbnail ?
           {
               "@type": `ImageObject`,
-              url: shareImage,
-              width: config.shareImageWidth,
-              height: config.shareImageHeight,
+              url: thumbnail,
+              width: 60,
+              height: 60,
           } : undefined,
       publisher: {
           "@type": `Organization`,
-          name: settings.title,
+          name: title,
           logo: {
               "@type": `ImageObject`,
-              url: publisherLogo,
+              url: thumbnail,
               width: 60,
               height: 60,
           },
       },
       mainEntityOfPage: {
           "@type": `WebPage`,
-          "@id": config.siteUrl,
+          "@id": url,
       },
       description,
   }

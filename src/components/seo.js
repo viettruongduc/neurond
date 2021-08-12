@@ -4,7 +4,7 @@ import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import SchemaOrg from './schema-org'
 function SEO({ description, lang, meta, thumbnail, metaKeywords, title, pathname, isBlogPost }) {
-
+  const type = "WebSite";
   const detailsQuery = graphql`
   query DefaultSEOQuery {
     site {
@@ -151,9 +151,9 @@ function SEO({ description, lang, meta, thumbnail, metaKeywords, title, pathname
             isBlogPost={isBlogPost}
             url={url}
             title={titleUpperCase || defaultTitle}
-            // image={metaThumbnail}
+            thumbnail={metaThumbnail}
             description={metaDescription}
-            // canonicalUrl={canonical}
+            canonical={canonical}
             defaultTitle={defaultTitle}
           />
           <Helmet>

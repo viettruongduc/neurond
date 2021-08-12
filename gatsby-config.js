@@ -12,6 +12,14 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: "gatsby-plugin-social9-socialshare",
+      options: {
+        async: true,
+        defer: true,
+        content: "58414279fb0b4085b40f7b183931dcc9"
+      },
+    },
+    {
       resolve: `gatsby-plugin-loadable-components-ssr`,
       options: {
         // Whether replaceHydrateFunction should call ReactDOM.hydrate or ReactDOM.render
