@@ -64,10 +64,10 @@ function SEO({ description, lang, meta, thumbnail, metaKeywords, title, pathname
               //   property: `og:image`,
               //   content: metaThumbnail,
               // },
-              {
-                property: `og:image:secure_url`,
-                content: metaThumbnail,
-              },
+              // {
+              //   property: `og:image:secure_url`,
+              //   content: metaThumbnail,
+              // },
               {
                 property: `og:image:alt`,
                 content: defaultTitle,
@@ -104,10 +104,10 @@ function SEO({ description, lang, meta, thumbnail, metaKeywords, title, pathname
                 name: `twitter:description`,
                 content: metaDescription,
               },
-              {
-                property: `twitter:image`,
-                content: metaThumbnail,
-              },
+              // {
+              //   property: `twitter:image`,
+              //   content: metaThumbnail,
+              // },
               {
                 name: `robots`,
                 content: `index,follow`,
@@ -122,7 +122,7 @@ function SEO({ description, lang, meta, thumbnail, metaKeywords, title, pathname
             isBlogPost={isBlogPost}
             url={url}
             title={titleUpperCase || defaultTitle}
-            image={metaThumbnail}
+            // image={metaThumbnail}
             description={metaDescription}
             canonicalUrl={canonical}
             defaultTitle={defaultTitle}
