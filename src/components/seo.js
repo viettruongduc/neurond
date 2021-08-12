@@ -60,10 +60,10 @@ function SEO({ description, lang, meta, thumbnail, metaKeywords, title, pathname
                 name: `description`,
                 content: metaDescription,
               },
-              {
-                property: `og:image`,
-                content: metaThumbnail,
-              },
+              // {
+              //   property: `og:image`,
+              //   content: metaThumbnail,
+              // },
               {
                 property: `og:image:secure_url`,
                 content: metaThumbnail,
