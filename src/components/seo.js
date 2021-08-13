@@ -146,7 +146,7 @@ function SEO({ description, lang, meta, thumbnail, metaKeywords, title, pathname
                 name: `keywords`,
                 content: keywords,
               },
-            ]}
+            ].concat(meta)}
           />
           {/* <SchemaOrg
             isBlogPost={isBlogPost}
