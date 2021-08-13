@@ -148,7 +148,7 @@ function SEO({ description, lang, meta, thumbnail, metaKeywords, title, pathname
               },
             ].concat(meta)}
           />
-          {/* <SchemaOrg
+          <SchemaOrg
             isBlogPost={isBlogPost}
             url={url}
             title={titleUpperCase || defaultTitle}
@@ -156,14 +156,14 @@ function SEO({ description, lang, meta, thumbnail, metaKeywords, title, pathname
             description={metaDescription}
             // canonical={canonical}
             defaultTitle={defaultTitle}
-          /> */}
-          {/* <Helmet>
+          />
+          <Helmet>
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:image" content={metaThumbnail} />
             <meta property="og:image" content={metaThumbnail} />
             <meta property="og:image:width" content="100" />
             <meta property="og:image:height" content="100" />
-          </Helmet > */}
+          </Helmet >
       </>
         )
       }}
