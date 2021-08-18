@@ -45,13 +45,16 @@ const BlogTemplate = ({ data }) => {
   }, [currentLanguage, data.blog])
   return (
     <>
-      <SEO
-        title={t(`Blog 3`)}
-        description={`blog.metaDescription`}
-        metaKeywords={blog.metaKeywords}
-        thumbnail={`https://neurondstorage.blob.core.windows.net/neurondasset/blogs%2F1_5Wc2Jwwrgygj_8ygGlgV0w.png`}
-        pathname={blogSlug}
-      />
+      {
+        blog &&
+        <SEO
+          title={t(`Blog 3`)}
+          description={`blog.metaDescription`}
+          metaKeywords={blog.metaKeywords}
+          thumbnail={`https://neurondstorage.blob.core.windows.net/neurondasset/blogs%2F1_5Wc2Jwwrgygj_8ygGlgV0w.png`}
+          pathname={blogSlug}
+        />
+      }
       <Header />
       <div className="margin-top-2">
         <BlueBackground
@@ -60,9 +63,9 @@ const BlogTemplate = ({ data }) => {
           author={blog.title}
           classCustom="margin-bot-custom"
         />
-        <div class="s9-widget-wrapper"></div>
       </div>
       <Sharing url={shareUrl} />
+      <div class="s9-widget-wrapper"></div>
       <BlogContent content={blog.content} />
       <Footer />
     </>
