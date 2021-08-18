@@ -44,7 +44,7 @@ const BlogTemplate = ({ data }) => {
       })
   }, [currentLanguage, data.blog])
   return (
-      <>
+    <>
       <SEO
         title={t(`Blog 3`)}
         description={`blog.metaDescription`}
@@ -62,7 +62,7 @@ const BlogTemplate = ({ data }) => {
         />
         <div class="s9-widget-wrapper"></div>
       </div>
-      {blog && <Sharing url={shareUrl} />}
+      <Sharing url={shareUrl} />
       <BlogContent content={blog.content} />
       <Footer />
     </>

@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 function SEO({ description, lang, meta, thumbnail, metaKeywords, title, pathname }) {
-  const type = "WebSite";
   const detailsQuery = graphql`
   query DefaultSEOQuery {
     site {
@@ -26,7 +25,7 @@ function SEO({ description, lang, meta, thumbnail, metaKeywords, title, pathname
         const metaDescription = description || data.site.siteMetadata.description
         const metaThumbnail =  thumbnail || data.site.siteMetadata.thumbnail
       
-        const keywords = metaKeywords ? metaKeywords : data.site.siteMetadata.keyWords
+        const keywords = metaKeywords || data.site.siteMetadata.keyWords
         const url = data.site.siteMetadata.siteUrl
         const defaultTitle = data.site.siteMetadata.title
       
