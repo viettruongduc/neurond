@@ -46,10 +46,10 @@ const BlogTemplate = ({ data }) => {
   return (
       <>
       <SEO
-        title={t(`${blog.title}`)}
+        title={t("Blog 3")}
         description={blog.metaDescription}
         metaKeywords={blog.metaKeywords}
-        thumbnail={blog.thumbnail}
+        thumbnail="https://neurondstorage.blob.core.windows.net/neurondasset/blogs%2F1_5Wc2Jwwrgygj_8ygGlgV0w.png"
         pathname={blogSlug}
         isBlogPost
       />
