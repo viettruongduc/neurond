@@ -47,9 +47,9 @@ const BlogTemplate = ({ data }) => {
       <>
       <SEO
         title={t(`Blog 3`)}
-        description={blog.metaDescription}
+        description={`blog.metaDescription`}
         metaKeywords={blog.metaKeywords}
-        thumbnail="https://neurondstorage.blob.core.windows.net/neurondasset/blogs%2F1_5Wc2Jwwrgygj_8ygGlgV0w.png"
+        thumbnail={`https://neurondstorage.blob.core.windows.net/neurondasset/blogs%2F1_5Wc2Jwwrgygj_8ygGlgV0w.png`}
         pathname={blogSlug}
       />
       <Header />
@@ -63,7 +63,6 @@ const BlogTemplate = ({ data }) => {
         <div class="s9-widget-wrapper"></div>
       </div>
       {blog && <Sharing url={shareUrl} />}
-      {/* <div class="s9-widget-wrapper"></div> */}
       <BlogContent content={blog.content} />
       <Footer />
     </>

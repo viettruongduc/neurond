@@ -25,7 +25,6 @@ function SEO({ description, lang, meta, thumbnail, metaKeywords, title, pathname
       render={data => {
         const metaDescription = description || data.site.siteMetadata.description
         const metaThumbnail =  thumbnail || data.site.siteMetadata.thumbnail
-        // const metaThumbnail =  "https://neurondstorage.blob.core.windows.net/neurondasset/blogs%2F1_5Wc2Jwwrgygj_8ygGlgV0w.png"
       
         const keywords = metaKeywords ? metaKeywords : data.site.siteMetadata.keyWords
         const url = data.site.siteMetadata.siteUrl
