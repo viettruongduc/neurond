@@ -73,8 +73,8 @@ function SEO({ description, lang, meta, thumbnail, metaKeywords, title, pathname
             htmlAttributes={{
               lang,
             }}
-            title={defaultTitle}
-            titleTemplate={data.site.siteMetadata.title}
+            title={title}
+            titleTemplate={title}
             link={
               canonical
                 ? [
@@ -104,7 +104,7 @@ function SEO({ description, lang, meta, thumbnail, metaKeywords, title, pathname
               },
               {
                 property: `og:title`,
-                content: defaultTitle,
+                content: title,
               },
               {
                 property: `og:description`,
