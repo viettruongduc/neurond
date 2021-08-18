@@ -2,8 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
-import SchemaOrg from './schema-org'
-function SEO({ description, lang, meta, thumbnail, metaKeywords, title, pathname, isBlogPost }) {
+function SEO({ description, lang, meta, thumbnail, metaKeywords, title, pathname }) {
   const type = "WebSite";
   const detailsQuery = graphql`
   query DefaultSEOQuery {
@@ -38,38 +37,9 @@ function SEO({ description, lang, meta, thumbnail, metaKeywords, title, pathname
       
         const canonical = pathname ? `${url}/${pathname}` : url
 
-        const jsonLd = {
-          "@context": `https://schema.org/`,
-          "@type": type,
-          url: canonical,
-          image: metaThumbnail ?
-              {
-                  "@type": `ImageObject`,
-                  url: metaThumbnail,
-                  // width: config.shareImageWidth,
-                  // height: config.shareImageHeight,
-              } : undefined,
-          publisher: {
-              "@type": `Organization`,
-              name: title,
-              logo: {
-                  "@type": `ImageObject`,
-                  url: metaThumbnail,
-                  width: 60,
-                  height: 60,
-              },
-          },
-          mainEntityOfPage: {
-              "@type": `WebPage`,
-              "@id": url,
-          },
-          description,
-      }
-
         return (
           <>
           <Helmet
-            defer={false}
             htmlAttributes={{
               lang,
             }}
@@ -145,25 +115,9 @@ function SEO({ description, lang, meta, thumbnail, metaKeywords, title, pathname
               {
                 name: `keywords`,
                 content: keywords,
-              },]}
-            // ].concat(meta)}
+              }
+            ].concat(meta)}
           />
-          {/* <SchemaOrg
-            isBlogPost={isBlogPost}
-            url={url}
-            title={titleUpperCase || defaultTitle}
-            // thumbnail={metaThumbnail}
-            description={metaDescription}
-            // canonical={canonical}
-            defaultTitle={defaultTitle}
-          /> */}
-          {/* <Helmet>
-            <meta name="twitter:card" content="summary_large_image" />
-            <meta name="twitter:image" content={metaThumbnail} />
-            <meta property="og:image" content={metaThumbnail} />
-            <meta property="og:image:width" content="100" />
-            <meta property="og:image:height" content="100" />
-          </Helmet > */}
       </>
         )
       }}

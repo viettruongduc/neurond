@@ -46,12 +46,11 @@ const BlogTemplate = ({ data }) => {
   return (
       <>
       <SEO
-        title={t("Blog 3")}
+        title={t(`Blog 3`)}
         description={blog.metaDescription}
         metaKeywords={blog.metaKeywords}
         thumbnail="https://neurondstorage.blob.core.windows.net/neurondasset/blogs%2F1_5Wc2Jwwrgygj_8ygGlgV0w.png"
         pathname={blogSlug}
-        isBlogPost
       />
       <Header />
       <div className="margin-top-2">
